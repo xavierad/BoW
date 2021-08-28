@@ -56,7 +56,7 @@ optimizer = optim.Adam([p for p in model.parameters() if p.requires_grad], lr=0.
 model.train()
 train_losses = []
 for epoch in range(10):
-    progress_bar = tqdm_notebook(train_loader, leave=False)
+    progress_bar = tqdm(train_loader, leave=False)
     losses = []
     total = 0
     for inputs, target in progress_bar:
